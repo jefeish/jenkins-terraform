@@ -3,4 +3,5 @@
 
 # ignore `state` files
 **/*.tfstate
+**/*.tfstate.*
 
