@@ -1,0 +1,6 @@
+# ignore terraform init data (`.terraform`)
+.terraform
+
+# ignore `state` files
+**/*.tfstate
+
