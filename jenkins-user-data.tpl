@@ -15,6 +15,7 @@ apt -y install jenkins
 apt -y install nginx
 # install 'docker' for docker based jenkins agents
 apt install docker.io
+usermod -a -G docker jenkins
 
 # remove the site link to 'default'
 rm /etc/nginx/sites-enabled/default
@@ -70,7 +71,7 @@ server {
 #     proxy_request_buffering off;
 #     proxy_buffering off; # Required for HTTP-based CLI to work over SSL
 #     # workaround for https://issues.jenkins-ci.org/browse/JENKINS-45651
-#     add_header 'X-SSH-Endpoint' 'jenkins.domain.tld:50022' always;
+#     add_header 'X-SSH-Endpoint' 'jenkins.jefeish.com:50022' always;
 #   }
 
 # }

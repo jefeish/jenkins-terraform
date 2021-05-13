@@ -65,3 +65,9 @@ This is still a semi manual process. Terraform installs all required tools but t
     > replace `<your_domain>`
 
 - [How to Configure Jenkins with SSL using an Nginx Reverse Proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy) - Disable the Jenkins '8080' access when HTTPS is enabled.
+
+- **Note:** If Jenkins displays a message like ***"It appears that your reverse proxy set up is broken"*** (when opening the *Management* page). Go to *"Manage Jenkins => Configure System => Jenkins URL"* and make sure it matches Nginx (proxy_redirect). For example, if all traffic is forwarded to *https*, the *Jenkin URL* should reflect that.
+
+    <img style="img {border: 2px solid #000;}" width="355" alt="jenkins_url" src="https://user-images.githubusercontent.com/863198/118058890-3c4de380-b35d-11eb-8fbc-aaf2c9656839.png">
+
+    Not using `https` can produce the warning message.
